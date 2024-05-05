@@ -1,6 +1,5 @@
 # Local .terraform directories
 **/.terraform/*
-**/.tf-google-gke-cluster/*
 
 # .tfstate files
 *.tfstate
