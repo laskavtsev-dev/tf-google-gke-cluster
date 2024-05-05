@@ -8,7 +8,7 @@ module "gke_cluster" {
   source         = "github.com/laskavtsev-dev/tf-google-gke-cluster"
   GOOGLE_REGION  = var.GOOGLE_REGION
   GOOGLE_PROJECT = var.GOOGLE_PROJECT
-  GKE_NUM_NODES  = 2
+  GKE_NUM_NODES  = var.GKE_NUM_NODES
 }
 
 resource "google_container_cluster" "this" {
