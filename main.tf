@@ -4,6 +4,13 @@ provider "google" {
   region  = var.GOOGLE_REGION
 }
 
+module "gke_cluster" {
+  source         = "github.com/laskavtsev-dev/tf-google-gke-cluster"
+  GOOGLE_REGION  = var.GOOGLE_REGION
+  GOOGLE_PROJECT = var.GOOGLE_PROJECT
+  GKE_NUM_NODES  = 2
+}
+
 resource "google_container_cluster" "this" {
   name     = var.GKE_CLUSTER_NAME
   location = var.GOOGLE_REGION
