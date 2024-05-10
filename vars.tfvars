@@ -1,2 +1,0 @@
-GOOGLE_PROJECT = "terraform-422415"
-GKE_NUM_NODES  = 3
